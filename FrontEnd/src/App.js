@@ -2,7 +2,6 @@ import "./App.css";
 import { createTheme, ThemeProvider } from "@mui/material";
 import SearchAppBar from "./Header/SearchAppBar";
 import Header from "./Header/Header";
-import Images from "./Images";
 import Dress from "./Categories/Dress";
 import Home from "./HomePage/Home";
 import Accessories from "./Categories/Accessories";
@@ -40,7 +39,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <SearchAppBar />
         <Header />
-        <Images />
+      
       </ThemeProvider>
       <Routes>
         <Route path="/" element={<Home />} />

@@ -64,6 +64,7 @@ const FilterColor = styled.div`
   background-color: ${(props) => props.color};
   margin: 0px 5px;
   cursor: pointer;
+  border: 1px solid black;
 `;
 
 // select option for size
@@ -125,7 +126,7 @@ const ProductDetails = (props) => {
     fetchPost();
   }, []);
 
-  console.log(product);
+  console.log(product.color)
 
   return (
     <>
@@ -140,17 +141,17 @@ const ProductDetails = (props) => {
 
           <FilterBox>
             <Filter>
-              <FilterTitle>Color</FilterTitle>
-              <FilterColor color="black" />
+            <FilterTitle>Color</FilterTitle>
+              {product.color?.map((c) => (
+                <FilterColor color={c} key={c} />
+              ))}
             </Filter>
             <Filter>
-              <FilterTitle>Size</FilterTitle>
+            <FilterTitle>Size</FilterTitle>
               <FilterSize>
-                <FilterSizeOption>XS</FilterSizeOption>
-                <FilterSizeOption>S</FilterSizeOption>
-                <FilterSizeOption>M</FilterSizeOption>
-                <FilterSizeOption>L</FilterSizeOption>
-                <FilterSizeOption>XL</FilterSizeOption>
+                {product.size?.map((s) => (
+                  <FilterSizeOption key={s}>{s}</FilterSizeOption>
+                ))}
               </FilterSize>
             </Filter>
           </FilterBox>
