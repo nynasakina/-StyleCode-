@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import RemoveIcon from "@mui/icons-material/Remove";
-import AddIcon from "@mui/icons-material/Add";
+
 import Remove from "@mui/icons-material/Remove";
 import { Add } from "@mui/icons-material";
 import { useParams } from "react-router";
@@ -113,9 +112,19 @@ const Button = styled.button`
 const ProductDetails = (props) => {
   const params = useParams();
   const productId = params.id;
-  const [product, setProduct] = useState([]);
 
-  const fetchPost = async (props) => {
+  const [product, setProduct] = useState([]);
+  const [quantity, setQuantity] = useState(1);
+
+  const handleClickQuantity =(type)=>{
+    if(type === "minus"){
+      setQuantity(quantity - 1)
+    } else {
+      setQuantity(quantity + 1)
+    }
+
+  }
+  const fetchPost = async () => {
     const res = await fetch(
       `http://localhost:5001/productdetails/${productId}`
     );
@@ -126,7 +135,6 @@ const ProductDetails = (props) => {
     fetchPost();
   }, []);
 
-  console.log(product.color)
 
   return (
     <>
@@ -141,13 +149,13 @@ const ProductDetails = (props) => {
 
           <FilterBox>
             <Filter>
-            <FilterTitle>Color</FilterTitle>
+              <FilterTitle>Color</FilterTitle>
               {product.color?.map((c) => (
                 <FilterColor color={c} key={c} />
               ))}
             </Filter>
             <Filter>
-            <FilterTitle>Size</FilterTitle>
+              <FilterTitle>Size</FilterTitle>
               <FilterSize>
                 {product.size?.map((s) => (
                   <FilterSizeOption key={s}>{s}</FilterSizeOption>
@@ -157,9 +165,9 @@ const ProductDetails = (props) => {
           </FilterBox>
           <AddContainer>
             <AmountContainer>
-              <Remove />
-              <Amount>1</Amount>
-              <Add />
+              <Remove onClick = {()=>handleClickQuantity("minus")} />
+              <Amount>{quantity}</Amount>
+              <Add onClick = {()=>handleClickQuantity("add")} />
             </AmountContainer>
             <Button>ADD TO BAG</Button>
           </AddContainer>
