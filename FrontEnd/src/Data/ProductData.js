@@ -1,0 +1,31 @@
+export const ProductData =[
+    {
+        id:1,
+        img:"https://www.forever21.com/on/demandware.static/-/Sites-f21-master-catalog/default/dwa1f8c899/1_front_750/00437165-03.jpg",
+      },
+      {
+        id:2,
+        img:"https://www.forever21.com/on/demandware.static/-/Sites-f21-master-catalog/default/dwa1f8c899/1_front_750/00437165-04.jpg",
+      },
+      {
+        id:3,
+        img:"https://www.forever21.com/on/demandware.static/-/Sites-f21-master-catalog/default/dwd1ea1a68/1_front_750/00442948-01.jpg",
+      },
+      {
+        id:4,
+        img:"https://www.burdastyle.com/pub/media/catalog/product/cache/7bd3727382ce0a860b68816435d76e26/107/BUS-PAT-BURTE-1320516/1170x1470_BS_2016_05_132_front.png",
+      },
+      {
+        id:5,
+        img:"https://images.ctfassets.net/5gvckmvm9289/3BlDoZxSSjqAvv1jBJP7TH/65f9a95484117730ace42abf64e89572/Noissue-x-Creatsy-Tote-Bag-Mockup-Bundle-_4_-2.png",
+      },
+      {
+        id:6,
+        img:"https://d3o2e4jr3mxnm3.cloudfront.net/Rocket-Vintage-Chill-Cap_66374_1_lg.png",
+      },
+  
+      {
+        id:8,
+        img:"https://www.pngarts.com/files/3/Women-Jacket-PNG-High-Quality-Image.png",
+      },
+    ]
