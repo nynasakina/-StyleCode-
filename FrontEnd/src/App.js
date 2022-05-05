@@ -2,21 +2,20 @@ import "./App.css";
 import { createTheme, ThemeProvider } from "@mui/material";
 import SearchAppBar from "./Header/SearchAppBar";
 import Header from "./Header/Header";
-import Dress from "./Categories/Dress";
+import Dresses from "./Categories/Dresses";
 import Home from "./HomePage/Home";
-import Accessories from "./Categories/Accessories";
 import Outerwear from "./Categories/Outerwear";
-import Top from "./Categories/Top";
+import Tops from "./Categories/Tops";
 import { Route, Routes } from "react-router";
 import "react-alice-carousel/lib/alice-carousel.css";
 import Lingerie from "./Categories/Lingerie";
-import Bottom from "./Categories/Bottom";
-import ContactUs from "./CustService/ContactUs";
-import FAQ from "./CustService/FAQ";
-import SignIn from "./SignIn";
-import ProductDetails from "./ProductDetails";
-import ShoppingCart from "./ShoppingCart";
-import SingleProduct from "./components/SingleProduct";
+import Bottoms from "./Categories/Bottoms";
+import FAQ from "./pages/FAQ";
+import SignIn from "./pages/SignIn";
+import ProductDetails from "./components/ProductDetails";
+import ShoppingCart from "./pages/ShoppingCart";
+import PaymentSuccess from "./pages/PaymentSuccess";
+import Wishlist from "./pages/Wishlist";
 
 const theme = createTheme({
   palette: {
@@ -39,24 +38,22 @@ function App() {
       <ThemeProvider theme={theme}>
         <SearchAppBar />
         <Header />
-      
       </ThemeProvider>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/dress" element={<Dress />} />
+        <Route path="/dresses" element={<Dresses />} />
         <Route path="/outerwear" element={<Outerwear />} />
-        <Route path="/top" element={<Top />} />
-        <Route path="/bottom" element={<Bottom />} />
-        <Route path="/accessories" element={<Accessories />} />
+        <Route path="/tops" element={<Tops />} />
+        <Route path="/bottoms" element={<Bottoms />} />
         <Route path="/Lingerie" element={<Lingerie />} />
-        <Route path="/ContactUs" element={<ContactUs />} />
         <Route path="/FAQ" element={<FAQ />} />
+        <Route path="/wishlist" element={<Wishlist />} />
+
         <Route path="/SignIn" element={<SignIn />} />
+        <Route path="/paymentsuccess" element={<PaymentSuccess />} />
         <Route path="/ProductDetails" element={<ProductDetails />} />
         <Route path="/ShoppingCart" element={<ShoppingCart />} />
         <Route path="/productdetails/:id" element={<ProductDetails />} />
-
-
       </Routes>
     </>
   );
