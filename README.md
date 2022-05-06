@@ -37,7 +37,6 @@ is a fashion e-commerce website based on the Model View Controller (MVC) Archite
 
 
 ## Known Issues
-Cart is emptied when page is refreshed. 
 
 
 ## Future Works
