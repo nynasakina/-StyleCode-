@@ -17,7 +17,7 @@ is a fashion e-commerce website based on the Model View Controller (MVC) Archite
 - [Forever21](https://rapidapi.com/apidojo/api/forever21)
 - [Stripe API](https://stripe.com/docs/api)
 
-## This project was built using the following, contributed by using standard Git flow on Github
+This project was built using the following, contributed by using standard Git flow on Github
 
 - React framework 
 - Styled Component 
