@@ -12,7 +12,13 @@ is a fashion e-commerce website based on the Model View Controller (MVC) Archite
 - Search function (*Work in progress*)
 - Wish list function (*Work in progress*)
 
+## Home Page View
 
+![Home Page](https://i.ibb.co/bWXC3S3/Screenshot-2022-05-06-at-3-04-49-PM.png)
+![Home Page](https://i.ibb.co/1XmjWdL/Screenshot-2022-05-06-at-3-00-14-PM.png)
+
+## Products By Category and Details View
+![Product Page](https://i.ibb.co/jgPZRhz/Screenshot-2022-05-06-at-3-00-42-PM.png)
 
 ## APIs
 
