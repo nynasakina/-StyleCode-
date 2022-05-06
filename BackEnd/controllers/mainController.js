@@ -27,6 +27,27 @@ router.post("/create", async (req, res) => {
   res.json("user saved");
 });
 
+//user Login
+router.post("/login", async (req, res) => {
+  const { email, password } = req.body;
+  const user = await Users.findOne({ email });
+
+  if (user === null) {
+    return res.status(401).json("No email found");
+  }
+
+  const result = await bcrypt.compare(email, user.password);
+  if (result) {
+    req.session.currentUser = user.email;
+    req.session.userId = user.id;
+    res.json({ status: "ok", message: "user logged in" });
+  } else {
+    // req.session.currentUser = null;
+    // req.session.userId = null;
+    res.status(401).json("Error");
+  }
+});
+
 //Create New Products
 router.post("/newproduct", async (req, res) => {
   const newProduct = new Product({
@@ -50,6 +71,17 @@ router.get("/:category", async (req, res) => {
   } catch (error) {
     console.log(error);
     res.status(401).json(error);
+  }
+});
+
+// Find All Products
+router.get("/product/all", async (req, res) => {
+  try {
+    const products = await Product.find({});
+    res.json(products);
+  } catch (error) {
+    console.log(error);
+    res.status(401).json(error.message);
   }
 });
 
