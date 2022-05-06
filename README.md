@@ -12,6 +12,16 @@ is a fashion e-commerce website based on the Model View Controller (MVC) Archite
 - Search function (*Work in progress*)
 - Wish list function (*Work in progress*)
 
+## Tech Stack
+
+
+This project was built using the following, contributed by using standard Git flow on Github
+
+- React framework 
+- Styled Component 
+- Axios for API calls
+- Express/MongoDB backend stack
+
 ## Home Page View
 
 ![Home Page](https://i.ibb.co/bWXC3S3/Screenshot-2022-05-06-at-3-04-49-PM.png)
@@ -25,13 +35,7 @@ is a fashion e-commerce website based on the Model View Controller (MVC) Archite
 - [Forever21](https://rapidapi.com/apidojo/api/forever21)
 - [Stripe API](https://stripe.com/docs/api)
 
-This project was built using the following, contributed by using standard Git flow on Github
-
-- React framework 
-- Styled Component 
-- Axios for API calls
-- Express/MongoDB backend stack
-
+## API Routes
 
 
 | Purpose                  | HTTPS VERB |
