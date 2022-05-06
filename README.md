@@ -37,7 +37,7 @@ This project was built using the following, contributed by using standard Git fl
 
 
 ## Known Issues
-
+Cart is empty after page is refreshed.
 
 ## Future Works
 The following add-on features may be considered to be added in StyleCode app
