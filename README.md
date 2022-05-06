@@ -12,6 +12,8 @@ is a fashion e-commerce website based on the Model View Controller (MVC) Archite
 - Search function (*Work in progress*)
 - Wish list function (*Work in progress*)
 
+
+
 ## APIs
 
 - [Forever21](https://rapidapi.com/apidojo/api/forever21)
