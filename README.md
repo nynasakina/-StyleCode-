@@ -42,6 +42,7 @@ Cart is emptied when page is refreshed.
 The following add-on features may be considered in future iterations of StyleCode app:
 
 - User Login and Authentication
+- User manage booking
 - Search Bar to search all items
 - Favourite feature adding favourite items to Wish List
 - Super Admin account to add, edit and delete products
