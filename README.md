@@ -1,6 +1,6 @@
 # StyleCode
 
-StyleCode is a captone project for my General Assembly Software Engineering Immersive course. Built using the MERN stack with **Styled Component**, StyleCode 
+StyleCode is a captone project for my General Assembly Software Engineering Immersive course. Built using the MERN stack, StyleCode 
 is a fashion e-commerce website based on the Model View Controller (MVC) Architecture. Product images found solely belongs to [Forever21](https://www.forever21.com).
 
 ## Features
