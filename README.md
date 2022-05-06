@@ -19,8 +19,6 @@ is a fashion e-commerce website based on the Model View Controller (MVC) Archite
 
 - Mern Stack
 
-### Database
-
 | Purpose                  | HTTPS VERB |
 | ------------------------ | ---------- |
 | Display All Products     | GET        |
