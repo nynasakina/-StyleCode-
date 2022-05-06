@@ -2,19 +2,14 @@ import * as React from "react";
 import { useEffect, useState } from "react";
 import { styled, alpha } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
-// import Box from "@mui/material/Box";
-import { Autocomplete } from "@mui/material";
-import { TextField } from "@mui/material";
-import { FormControl } from "@mui/material";
 import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
 import InputBase from "@mui/material/InputBase";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
-import PersonIcon from "@mui/icons-material/Person";
 import SearchIcon from "@mui/icons-material/Search";
 import { Typography, Link } from "@mui/material";
 import { Navigate, useNavigate } from "react-router";
-
+import { FavoriteOutlined } from "@mui/icons-material";
+import { TextField } from "@mui/material";
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
   borderRadius: theme.shape.borderRadius,
@@ -71,6 +66,9 @@ const SearchAppBar = () => {
     navigate("/shoppingcart");
   };
 
+  const handleChangeFav = () => {
+    navigate("/wishlist");
+  };
   //FETCH ALL PRODUCTS
   const fetchPost = async () => {
     const res = await fetch("http://localhost:5001/seed");
@@ -101,7 +99,12 @@ const SearchAppBar = () => {
             style={{ textDecoration: "none" }}
             sx={{ flexGrow: 1 }}
           >
-            STYLECODE
+            <img
+              src="https://i.ibb.co/nRWCGLc/Stylecode.png"
+              alt="STYLECODE"
+              width="200"
+              height="50"
+            />{" "}
           </Link>
 
           <Search>
@@ -109,21 +112,17 @@ const SearchAppBar = () => {
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ "aria-label": "search" }}
+              // placeholder="Search…"
+              // inputProps={{ "aria-label": "search" }}
               sx={{ minWidth: 350 }}
+            
             />
+ 
           </Search>
-          <IconButton
-            size="small"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 1, ml: 2 }}
-          >
-            <PersonIcon /*onClick={handleChangeSignin}*/ />
-            <AddShoppingCartIcon /*onClick={handleChangeCart}*/ />
-          </IconButton>
+
+          {/* <PersonIcon onClick={handleChangeSignin} /> */}
+          <AddShoppingCartIcon onClick={handleChangeCart} />
+          <FavoriteOutlined onClick={handleChangeFav}/>
         </Toolbar>
       </AppBar>
       {/* </Box> */}

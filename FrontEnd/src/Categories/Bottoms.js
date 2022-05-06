@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useEffect, useState } from "react";
 import ProductList from "../components/ProductList";
 import styled from "styled-components";
 import SingleProduct from "../components/SingleProduct";
@@ -9,15 +9,16 @@ const Container = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
 `;
-const Outerwear = () => {
-  const [outerwear, setOuterwear] = useState([]);
+const Bottoms = () => {
   const [filter, setFilters] = useState({});
+  console.log(filter);
+  const [bottom, setBottom] = useState([]);
 
   // Fetch all products
   const fetchPost = async () => {
-    const res = await fetch("http://localhost:5001/outerwear");
+    const res = await fetch("http://localhost:5001/bottoms");
     const data = await res.json();
-    setOuterwear(data);
+    setBottom(data);
   };
 
   useEffect(() => {
@@ -26,13 +27,13 @@ const Outerwear = () => {
 
   return (
     <>
-       <ProductList filter={filter} setFilters={setFilters} />
+      <ProductList filter={filter} setFilters={setFilters} />
       <Container>
         {Object.keys(filter).length === 0 || (filter.colour === "Colour" && filter.size === "Size") 
-          ? outerwear.map((item) => {
+          ? bottom.map((item) => {
               return <SingleProduct item={item} key={item.id} />;
             })
-          : outerwear.map((item) => {
+          : bottom.map((item) => {
               if (item.color.indexOf(filter.colour) !== -1 || item.size.indexOf(filter.size) !== -1)  {
                 return <SingleProduct item={item} key={item.id} />;
               }
@@ -42,4 +43,4 @@ const Outerwear = () => {
   );
 };
 
-export default Outerwear;
+export default Bottoms;

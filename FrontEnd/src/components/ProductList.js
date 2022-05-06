@@ -28,24 +28,21 @@ const Select = styled.select`
 `;
 const Option = styled.option``;
 
-const ProductList = () => {
+const ProductList = ({ filter, setFilters }) => {
   const location = useLocation();
-  const category = location.pathname.split("/")[1];
-
-  const [filter, setFilters] = useState({});
-  const [sort, setSort] = useState("newest");
+  const category = location.pathname.split("/")[1].toLowerCase();
 
   const handleFilters = (e) => {
     const value = e.target.value;
     setFilters({
+      ...filter,
       [e.target.name]: value,
     });
-
-    console.log(filter);
   };
+
   return (
     <>
-      <Title>{category}</Title>
+      <Title>{category.toUpperCase()}</Title>
       <FilterContainer>
         <Filter>
           <FilterText>Filter Products:</FilterText>
@@ -61,21 +58,14 @@ const ProductList = () => {
           </Select>
           <Select name="size" onChange={handleFilters}>
             <Option>Size</Option>
-            <Option>XS</Option>
-            <Option>S</Option>
-            <Option>M</Option>
-            <Option>L</Option>
-            <Option>XL</Option>
+            <Option>xs</Option>
+            <Option>s</Option>
+            <Option>m</Option>
+            <Option>l</Option>
+            <Option>xl</Option>
           </Select>
         </Filter>
-        <Filter>
-          <FilterText>Sort Products:</FilterText>
-          <Select onChange={(e) => setSort(e.target.value)}>
-            <Option value="newest">Price</Option>
-            <Option value="ascending">Price ↑</Option>
-            <Option value="descending">Price ↓</Option>
-          </Select>
-        </Filter>
+        <Filter></Filter>
       </FilterContainer>
     </>
   );

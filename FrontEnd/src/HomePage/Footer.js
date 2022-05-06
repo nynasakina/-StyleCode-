@@ -8,6 +8,11 @@ import {
   Button,
   TextField,
 } from "@mui/material";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import PhoneIcon from "@mui/icons-material/Phone";
+import BusinessIcon from "@mui/icons-material/Business";
 
 const Footer = () => {
   // const style = {
@@ -37,15 +42,6 @@ const Footer = () => {
               <br />
               <Box>
                 <Link
-                  href="/contactus"
-                  color="inherit"
-                  style={{ textDecoration: "none" }}
-                >
-                  Contact Us
-                </Link>
-              </Box>
-              <Box>
-                <Link
                   href="/faq"
                   color="inherit"
                   style={{ textDecoration: "none" }}
@@ -53,13 +49,28 @@ const Footer = () => {
                   FAQ
                 </Link>
               </Box>
+              <br />
+              <Box>
+                <PhoneIcon fontSize="small" /> +65 65699723
+                <br />
+                <BusinessIcon fontSize="small" /> 79 Anson Rd, Level 20,
+                Singapore 079906
+              </Box>
             </Grid>
             <Grid item xs={12} sm={4}>
               <Box>
                 <strong>CONNECT WITH US</strong>
               </Box>
               <br />
-              <Box>SOCMED</Box>
+              <Box>
+                <Link href="www.facebook.com">
+              
+                  <FacebookIcon />
+                </Link>
+
+                <InstagramIcon />
+                <TwitterIcon />
+              </Box>
             </Grid>
             <Grid item xs={12} sm={4}>
               <Box>

@@ -4,6 +4,8 @@ import styled from "styled-components";
 import Remove from "@mui/icons-material/Remove";
 import { Add } from "@mui/icons-material";
 import { useParams } from "react-router";
+import { addProduct } from "../Redux/cartRedux";
+import { useDispatch } from "react-redux";
 
 const Wrapper = styled.div`
   padding: 10px;
@@ -18,7 +20,8 @@ const ImgContainer = styled.div`
 const Image = styled.img`
   width: 60%;
   object-fit: cover;
-  float: right;
+  float: center;
+  margin-left: 100px;
 `;
 
 const InfoContainer = styled.div`
@@ -31,7 +34,7 @@ const Title = styled.h1`
 `;
 
 const Desc = styled.p`
-  margin: 20px 0px;
+  margin: 10px 0px;
 `;
 
 const Price = styled.span`
@@ -100,12 +103,12 @@ const Amount = styled.span`
 const Button = styled.button`
   padding: 15px;
   color: white;
-  border: 2px solid pink;
   background-color: black;
   cursor: pointer;
   font-weight: 400;
   &:hover {
-    background-color: #f8f4f4;
+    background-color: #ffffff;
+    color: #000000;
   }
 `;
 
@@ -115,15 +118,26 @@ const ProductDetails = (props) => {
 
   const [product, setProduct] = useState([]);
   const [quantity, setQuantity] = useState(1);
+  const [selectedColor, setSelectedColor] = useState("");
+  const [selectedSize, setSelectedSize] = useState("");
 
-  const handleClickQuantity =(type)=>{
-    if(type === "minus"){
-      setQuantity(quantity - 1)
+  const dispatch = useDispatch();
+  const handleClickQuantity = (type) => {
+    if (type === "minus") {
+      quantity > 1 && setQuantity(quantity - 1);
     } else {
-      setQuantity(quantity + 1)
+      setQuantity(quantity + 1);
     }
+  };
 
-  }
+  const handleClickButton = () => {
+    dispatch(
+      // addProduct({ product, quantity, price: product.price * quantity })
+      addProduct({ ...product, quantity, selectedColor, selectedSize })
+    );
+    console.log("added to cart!");
+  };
+
   const fetchPost = async () => {
     const res = await fetch(
       `http://localhost:5001/productdetails/${productId}`
@@ -134,7 +148,6 @@ const ProductDetails = (props) => {
   useEffect(() => {
     fetchPost();
   }, []);
-
 
   return (
     <>
@@ -151,25 +164,33 @@ const ProductDetails = (props) => {
             <Filter>
               <FilterTitle>Color</FilterTitle>
               {product.color?.map((c) => (
-                <FilterColor color={c} key={c} />
+                <FilterColor
+                  color={c}
+                  key={c}
+                  onClick={() => setSelectedColor(c)}
+                />
               ))}
             </Filter>
             <Filter>
               <FilterTitle>Size</FilterTitle>
-              <FilterSize>
+              <FilterSize onChange={(e) => setSelectedSize(e.target.value)}>
                 {product.size?.map((s) => (
                   <FilterSizeOption key={s}>{s}</FilterSizeOption>
                 ))}
               </FilterSize>
             </Filter>
+            <AmountContainer>
+
+              <Remove onClick={() => handleClickQuantity("minus")} />
+              <Amount>{quantity}</Amount>
+              <Add onClick={() => handleClickQuantity("add")} />
+            </AmountContainer>
           </FilterBox>
           <AddContainer>
-            <AmountContainer>
-              <Remove onClick = {()=>handleClickQuantity("minus")} />
-              <Amount>{quantity}</Amount>
-              <Add onClick = {()=>handleClickQuantity("add")} />
-            </AmountContainer>
-            <Button>ADD TO BAG</Button>
+        
+            <Button onClick={handleClickButton}>ADD TO BAG</Button>
+
+            {/* <Button onClick={handleClickButton}>CHECKOUT NOW</Button> */}
           </AddContainer>
         </InfoContainer>
       </Wrapper>

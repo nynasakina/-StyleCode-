@@ -7,11 +7,10 @@ const Header = () => {
     <div className={styles.header}>
       <ul className={styles.ul}>
         <li className={styles.li}>
-          <Link to="Dress">DRESS</Link> |
-          <Link to="Top">TOPS</Link> |
+          <Link to="Dresses">DRESSES</Link> |
+          <Link to="Tops">TOPS</Link> |
           <Link to="Outerwear">OUTERWEAR</Link> |
-          <Link to="Bottom">BOTTOMS</Link> |
-          <Link to="Accessories">ACCESSORIES</Link> |
+          <Link to="Bottoms">BOTTOMS</Link> |
           <Link to="Lingerie">LINGERIE</Link>
 
         </li>

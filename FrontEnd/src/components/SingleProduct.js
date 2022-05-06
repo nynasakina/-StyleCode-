@@ -1,8 +1,13 @@
-import { FavoriteBorderOutlined, LaunchOutlined } from "@mui/icons-material";
-import React from "react";
+import {
+  Favorite,
+  FavoriteBorderOutlined,
+  LaunchOutlined,
+} from "@mui/icons-material";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router";
+import Wishlist from "../pages/Wishlist";
 
 const Info = styled.div`
   opacity: 0;
@@ -41,12 +46,6 @@ const Container = styled.div`
     transform: scale(0.9);
   }
 `;
-const Circle = styled.div`
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  position: absolute;
-`;
 
 const Details = styled.span`
   bottom: 0px;
@@ -76,12 +75,31 @@ const Icon = styled.div`
     transform: scale(1.5);
   }
 `;
-const SingleProduct = ({ item }) => {
-  const params = useParams();
-  console.log(params);
+const SingleProduct = ({ item, setFavorite, favorite }) => {
+  // const params = useParams();
+  const [allProducts, setAllProducts] = useState([]);
+
+  const fetchPost = async () => {
+    const res = await fetch("http://localhost:5001/product/all");
+    const data = await res.json();
+    setAllProducts(data);
+  };
+
+  useEffect(() => {
+    fetchPost();
+  }, []);
+
+  const addFavorites = (e) => {
+    e.preventDefault();
+
+    if (favorite.indexOf(item.name) === -1) {
+      setFavorite((prevState) => {
+        return [...prevState, item.name];
+      });
+    }  };
+
   return (
     <Container>
-      <Circle />
       <Image src={`${item.img}`} alt={item.name} />
 
       {/* <Image>
@@ -94,7 +112,7 @@ const SingleProduct = ({ item }) => {
           </Link>
         </Icon>
         <Icon>
-          <FavoriteBorderOutlined />
+          <FavoriteBorderOutlined onClick={addFavorites} />
         </Icon>
         <Details>
           <strong>{item.name}</strong>
