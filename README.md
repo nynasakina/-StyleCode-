@@ -40,7 +40,7 @@ is a fashion e-commerce website based on the Model View Controller (MVC) Archite
 
 
 ## Future Works
-The following add-on features may be considered in future iterations of StyleCode app:
+The following add-on features may be considered to be added in StyleCode app
 
 - User Login and Authentication
 - User manage booking
