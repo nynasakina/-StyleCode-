@@ -57,11 +57,6 @@ const SearchAppBar = () => {
   const [allProduct, setAllProduct] = useState([]);
 
   let navigate = useNavigate();
-
-  const handleChangeSignin = () => {
-    navigate("/signin");
-  };
-
   const handleChangeCart = () => {
     navigate("/shoppingcart");
   };
@@ -69,6 +64,7 @@ const SearchAppBar = () => {
   const handleChangeFav = () => {
     navigate("/wishlist");
   };
+
   //FETCH ALL PRODUCTS
   const fetchPost = async () => {
     const res = await fetch("http://localhost:5001/seed");
@@ -112,15 +108,13 @@ const SearchAppBar = () => {
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
-              // placeholder="Search…"
-              // inputProps={{ "aria-label": "search" }}
+             
               sx={{ minWidth: 350 }}
             
             />
  
           </Search>
 
-          {/* <PersonIcon onClick={handleChangeSignin} /> */}
           <AddShoppingCartIcon onClick={handleChangeCart} />
           <FavoriteOutlined onClick={handleChangeFav}/>
         </Toolbar>

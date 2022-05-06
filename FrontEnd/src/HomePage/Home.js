@@ -12,7 +12,7 @@ const Home = () => {
     <div>
       <center>
         <br />
-        <AliceCarousel loop={true} autoPlay={true} autoPlayInterval="2500">
+        <AliceCarousel loop={true} autoPlay={true} autoPlayInterval="8500">
           <img src={Img1} alt={Img1} className="sliderimg" />
           <img src={Img2} alt={Img2} className="sliderimg" />
           <img src={Img3} alt={Img3} className="sliderimg" />

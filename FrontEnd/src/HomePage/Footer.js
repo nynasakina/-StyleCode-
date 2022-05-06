@@ -15,16 +15,6 @@ import PhoneIcon from "@mui/icons-material/Phone";
 import BusinessIcon from "@mui/icons-material/Business";
 
 const Footer = () => {
-  // const style = {
-  //   backgroundColor: "#F8F8F8",
-  //   borderTop: "10px solid #ff0099",
-  //   position: "fixed",
-  //   left: "0",
-  //   bottom: "0",
-  //   height: "200px",
-  //   width: "100%"
-  // };
-
   return (
     <div>
       <Box
@@ -64,7 +54,6 @@ const Footer = () => {
               <br />
               <Box>
                 <Link href="www.facebook.com">
-              
                   <FacebookIcon />
                 </Link>
 
