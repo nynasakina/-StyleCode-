@@ -15,9 +15,15 @@ is a fashion e-commerce website based on the Model View Controller (MVC) Archite
 - [Forever21](https://rapidapi.com/apidojo/api/forever21)
 - [Stripe API](https://stripe.com/docs/api)
 
-## Tech Stack
+## 
+This project was built using the following, contributed by using standard Git flow on Github
 
-- Mern Stack
+- React framework 
+- Styled Component 
+- Axios for API calls
+- Express/MongoDB backend stack
+
+
 
 | Purpose                  | HTTPS VERB |
 | ------------------------ | ---------- |
@@ -30,6 +36,7 @@ is a fashion e-commerce website based on the Model View Controller (MVC) Archite
 
 
 ## Known Issues
+Cart is emptied when page is refreshed. 
 
 
 ## Future Works
