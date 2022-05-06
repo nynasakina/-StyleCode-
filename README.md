@@ -1,5 +1,8 @@
 # StyleCode
 
+[link](https://i.graphicmama.com/blog/wp-content/uploads/2021/06/15140840/Free-Eccomerce-Illustrations-Vector-03.png)
+
+
 StyleCode is a captone project for my General Assembly Software Engineering Immersive course. Built using the MERN stack, StyleCode 
 is a fashion e-commerce website based on the Model View Controller (MVC) Architecture. Product images found solely belongs to [Forever21](https://www.forever21.com).
 
