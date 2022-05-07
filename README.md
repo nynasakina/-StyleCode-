@@ -7,6 +7,8 @@ is a fashion e-commerce website based on the Model View Controller (MVC) Archite
 
 - Browse products by category
 - Filter products by colour and size
+- Add products to cart
+- Check out and make payment
 - Search function (*Work in progress*)
 - Wish list function (*Work in progress*)
 
