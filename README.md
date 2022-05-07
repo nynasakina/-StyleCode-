@@ -1,7 +1,5 @@
 # StyleCode
 
-
-
 StyleCode is a captone project for General Assembly Software Engineering Immersive. Built using the MERN stack, StyleCode 
 is a fashion e-commerce website based on the Model View Controller (MVC) Architecture. Product images found solely belongs to [Forever21](https://www.forever21.com).
 
@@ -14,13 +12,18 @@ is a fashion e-commerce website based on the Model View Controller (MVC) Archite
 
 ## Tech Stack
 
-
 This project was built using the following, contributed by using standard Git flow on Github
 
 - React framework 
 - Styled Component 
 - Axios for API calls
 - Express/MongoDB backend stack
+- Stripe for payment
+
+StyleCode integrates Stripe to allow for payment with items that are checked out by user. Stripe accepts a request made to its server and in return displays a checkout page with payment options as well as the items that were checked out earlier.
+
+![Stripe](https://i.ibb.co/vZYqs2F/Screenshot-2022-05-06-at-3-01-11-PM.png)
+
 
 ## Home Page View
 
