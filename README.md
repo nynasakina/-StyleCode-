@@ -18,8 +18,7 @@ All product images found solely belong to [Forever21](https://www.forever21.com)
 
 This project was built using the following:
 
-- React framework 
-- Styled Component 
+- React framework, styled using Styled Component 
 - Axios for API calls
 - Express/MongoDB backend stack
 - Stripe for payment
