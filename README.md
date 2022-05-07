@@ -12,7 +12,7 @@ is a fashion e-commerce website based on the Model View Controller (MVC) Archite
 
 ## Tech Stack
 
-This project was built using the following, contributed by using standard Git flow on Github
+This project was built using the following:
 
 - React framework 
 - Styled Component 
