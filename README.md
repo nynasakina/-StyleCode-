@@ -53,10 +53,6 @@ StyleCode integrates Stripe to allow for payment with items that are checked out
 | Create New Users         | POST       |
 | Make Payment             | POST       |
 
-
-## Known Issues
-Cart is empty after page is refreshed.
-
 ## Future Works
 The following add-on features may be considered to be added in StyleCode app
 
