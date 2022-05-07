@@ -24,7 +24,7 @@ This project was built using the following:
 - Express/MongoDB backend stack
 - Stripe for payment
 
-StyleCode integrates Stripe to allow for payment with items that are checked out by user. Stripe accepts a request made to its server and returns a URL which displays a checkout page with payment options as well as the items that were checked out earlier. Upon successful payment, user is directed to back to StyleCode with a confirmation message.
+StyleCode integrates Stripe to allow for payment with items that are checked out by user. Stripe accepts a request made to its server and returns a URL which displays a checkout page with payment options. Product details such as name, price ad quantity, as well as shipping fee, will also be displayed. Upon successful payment, user is directed to back to StyleCode with a confirmation message.
 
 ![Stripe](https://i.ibb.co/D8qWVqY/Screenshot-2022-05-06-at-3-01-22-PM.png)
 
