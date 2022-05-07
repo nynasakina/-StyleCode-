@@ -33,7 +33,7 @@ On hover over each product, two buttons will be displayed for user to either lik
 
 ![Product Page](https://i.ibb.co/jgPZRhz/Screenshot-2022-05-06-at-3-00-42-PM.png)
 
-## Cart
+## Cart View
 ![Cart](https://i.ibb.co/NZqvjgG/Screenshot-2022-05-06-at-3-01-11-PM.png)
 
 StyleCode integrates Stripe to allow for payment with items that are checked out by user. Stripe accepts a request made to its server and returns a URL which displays a checkout page with payment options. Product details such as name, price ad quantity, as well as shipping fee, will also be displayed. Upon successful payment, user is directed to back to StyleCode with a confirmation message.
