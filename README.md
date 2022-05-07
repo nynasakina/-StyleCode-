@@ -33,6 +33,9 @@ On hover over each product, two buttons will be displayed for user to either lik
 
 ![Product Page](https://i.ibb.co/jgPZRhz/Screenshot-2022-05-06-at-3-00-42-PM.png)
 
+## Product Detail View
+![Product Ddetail](https://i.ibb.co/6XMCRVW/Screenshot-2022-05-07-at-9-00-43-AM.png)
+
 ## Cart View
 ![Cart](https://i.ibb.co/NZqvjgG/Screenshot-2022-05-06-at-3-01-11-PM.png)
 
