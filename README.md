@@ -1,4 +1,4 @@
-# StyleCode
+# 👗 StyleCode
 
 StyleCode is a captone project for General Assembly Software Engineering Immersive. Built using the MERN stack, StyleCode 
 is a fashion e-commerce website based on the Model View Controller (MVC) Architecture. 
